@@ -100,6 +100,11 @@
   .look figure{margin:0;position:relative;overflow:hidden;background:var(--ink-2);aspect-ratio:4/3}
   .look img{width:100%;height:100%;object-fit:cover;display:block}
 
+  .walk{display:grid;grid-template-columns:2.3fr 1fr;gap:16px;align-items:start;margin-top:30px}
+  .walk>*{min-width:0}
+  .walk figure{margin:0;position:relative;background:var(--ink-2);border:1px solid var(--line)}
+  .walk video{width:100%;display:block}
+
   /* projekte */
   .proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:32px}
   .pj{border-top:1px solid var(--brass);padding-top:16px}
@@ -147,6 +152,7 @@
     .reels{grid-template-columns:repeat(2,1fr)}
   }
   @media(max-width:700px){
+    .walk{grid-template-columns:1fr}
     .nav-links{gap:14px}
     .nav-links a:not(.btn){display:none}
     .look{grid-template-columns:1fr}
@@ -164,8 +170,8 @@
     </a>
     <div class="nav-links">
       <a href="#bereiche">Leistungen</a>
-      <a href="#fahrzeuge">Fahrzeuge</a>
       <a href="#unterkuenfte">Unterkünfte</a>
+      <a href="#fahrzeuge">Fahrzeuge</a>
       <a href="#projekte">Projekte</a>
       <a href="#anfrage" class="btn">Anfragen</a>
     </div>
@@ -221,9 +227,46 @@
         <div class="no">04</div>
         <h3>KI-Content</h3>
         <p>Videos aus Fotos, die du schon hast. Ohne Drehtermin, ohne Team vor Ort.</p>
-        <ul><li>Fahrzeugvideos für Inserate</li><li>Walkthroughs für Unterkünfte</li><li>Reels und Werbevideos</li></ul>
-        <a class="more" href="#fahrzeuge">Beispiele →</a>
+        <ul><li>Walkthroughs für Unterkünfte</li><li>Fahrzeugvideos für Inserate</li><li>Reels und Werbevideos</li></ul>
+        <a class="more" href="#unterkuenfte">Beispiele →</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="unterkuenfte">
+  <div class="wrap">
+    <div class="lbl">Spezialisierung · Unterkünfte &amp; Immobilien</div>
+    <h2>Räume, die man spüren kann.</h2>
+    <p>Die meisten Inserate bestehen aus Standbildern. Gäste scrollen vorbei, weil sie nicht erkennen, wie sich ein Ort anfühlt. Aus deinen vorhandenen Fotos entstehen Walkthrough, Reel und Hochkant-Schnitt – mit Musik, Logo und deiner Farbwelt. Erste Version in drei Werktagen.</p>
+    <div class="walk">
+      <figure class="w169"><span class="tag">KI-Musterobjekt · Walkthrough 16:9</span>
+        <video src="video/walkthrough-16x9.mp4" poster="img/walkthrough-16x9.jpg" muted loop playsinline controls preload="none" aria-label="KI-generiertes Musterobjekt: Walkthrough einer Ferienwohnung im Querformat"></video></figure>
+      <figure class="w916"><span class="tag">Reel 9:16</span>
+        <video src="video/walkthrough-9x16.mp4" poster="img/walkthrough-9x16.jpg" muted loop playsinline controls preload="none" aria-label="KI-generiertes Musterobjekt: Walkthrough als Hochkant-Reel"></video></figure>
+    </div>
+    <p class="note">Beispiel aus KI-generierten Musterobjekten. Echte Kundenarbeiten folgen, sobald die ersten Projekte freigegeben sind.</p>
+    <div class="look" style="margin-top:22px">
+      <figure><span class="tag">KI-Musterobjekt · Ferienhaus</span><img src="img/kitchen.jpg" alt="Küche und Essplatz eines Ferienhauses im Nachmittagslicht" loading="lazy"></figure>
+      <figure><span class="tag">KI-Musterobjekt · Hotel</span><img src="img/hotel.jpg" alt="Hotelzimmer in warmem Abendlicht" loading="lazy"></figure>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Paket</th><th>Enthalten</th><th style="text-align:right">Preis</th></tr></thead>
+        <tbody>
+          <tr><td class="name">Start</td><td class="desc">bis 15 Fotos · ein Video, 20–30 Sek. · ein Format · Musik · dezentes Branding · eine Korrekturschleife</td><td class="price">79 €</td></tr>
+          <tr><td class="name">Signature</td><td class="desc">bis 25 Fotos · Walkthrough 30–45 Sek. · Reel 9:16 · Story-Schnitt · Logo und Farben · Texteinblendungen · zwei Korrekturschleifen</td><td class="price">189 €</td></tr>
+          <tr><td class="name">Property</td><td class="desc">bis 40 Fotos · drei Videos · alle Formate · Titel und Abbinder · Untertitel · drei Thumbnails</td><td class="price">349 €</td></tr>
+          <tr><td class="name">Laufend</td><td class="desc">vier Videos im Monat · alle Formate · Content-Planung · bevorzugte Bearbeitung · monatlich kündbar</td><td class="price">399 €<small> /Mon.</small></td></tr>
+          <tr><td class="name">Laufend Plus</td><td class="desc">acht Videos im Monat · alle Formate · Google-Business-Beiträge · Content-Planung</td><td class="price">699 €<small> /Mon.</small></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="addons">
+      <span>Express 48 Stunden · + 40 %</span>
+      <span>Weitere Sprachfassung · + 25 €</span>
+      <span>Zusätzliches Format · + 29 €</span>
+      <span>Weitere Korrekturschleife · + 25 €</span>
     </div>
   </div>
 </section>
@@ -273,36 +316,6 @@
       <div class="step"><h3>Fotos schicken</h3><p>6–10 Fotos eines Fahrzeugs – außen, innen, Details. Handyfotos reichen, wenn sie hell und scharf sind.</p></div>
       <div class="step"><h3>Wir bauen</h3><p>Szene wählen oder uns überlassen. Das Fahrzeug bleibt, wie es ist.</p></div>
       <div class="step"><h3>Video nutzen</h3><p>Hoch- und Querformat als MP4, in 48 Stunden. Eine Korrektur inklusive.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="unterkuenfte">
-  <div class="wrap">
-    <div class="lbl">Spezialisierung · Unterkünfte &amp; Immobilien</div>
-    <h2>Räume, die man spüren kann.</h2>
-    <p>Die meisten Inserate bestehen aus Standbildern. Gäste scrollen vorbei, weil sie nicht erkennen, wie sich ein Ort anfühlt. Aus deinen vorhandenen Fotos entstehen Walkthrough, Reel und Hochkant-Schnitt – mit Musik, Logo und deiner Farbwelt. Erste Version in drei Werktagen.</p>
-    <div class="look">
-      <figure><span class="tag">KI-Musterobjekt · Ferienhaus</span><img src="img/kitchen.jpg" alt="Küche und Essplatz eines Ferienhauses im Nachmittagslicht" loading="lazy"></figure>
-      <figure><span class="tag">KI-Musterobjekt · Hotel</span><img src="img/hotel.jpg" alt="Hotelzimmer in warmem Abendlicht" loading="lazy"></figure>
-    </div>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>Paket</th><th>Enthalten</th><th style="text-align:right">Preis</th></tr></thead>
-        <tbody>
-          <tr><td class="name">Start</td><td class="desc">bis 15 Fotos · ein Video, 20–30 Sek. · ein Format · Musik · dezentes Branding · eine Korrekturschleife</td><td class="price">79 €</td></tr>
-          <tr><td class="name">Signature</td><td class="desc">bis 25 Fotos · Walkthrough 30–45 Sek. · Reel 9:16 · Story-Schnitt · Logo und Farben · Texteinblendungen · zwei Korrekturschleifen</td><td class="price">189 €</td></tr>
-          <tr><td class="name">Property</td><td class="desc">bis 40 Fotos · drei Videos · alle Formate · Titel und Abbinder · Untertitel · drei Thumbnails</td><td class="price">349 €</td></tr>
-          <tr><td class="name">Laufend</td><td class="desc">vier Videos im Monat · alle Formate · Content-Planung · bevorzugte Bearbeitung · monatlich kündbar</td><td class="price">399 €<small> /Mon.</small></td></tr>
-          <tr><td class="name">Laufend Plus</td><td class="desc">acht Videos im Monat · alle Formate · Google-Business-Beiträge · Content-Planung</td><td class="price">699 €<small> /Mon.</small></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="addons">
-      <span>Express 48 Stunden · + 40 %</span>
-      <span>Weitere Sprachfassung · + 25 €</span>
-      <span>Zusätzliches Format · + 29 €</span>
-      <span>Weitere Korrekturschleife · + 25 €</span>
     </div>
   </div>
 </section>
@@ -413,7 +426,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   var io = new IntersectionObserver(function (es) {
     es.forEach(function (e) { var v = e.target; if (v.hidden) return; e.isIntersecting ? v.play().catch(function(){}) : v.pause(); });
   }, { threshold: .4 });
-  document.querySelectorAll('.reel video').forEach(function (v) { io.observe(v); });
+  document.querySelectorAll('.reel video, .walk video').forEach(function (v) { io.observe(v); });
 }
 document.getElementById('anfrageform').addEventListener('submit', function (e) {
   e.preventDefault();
